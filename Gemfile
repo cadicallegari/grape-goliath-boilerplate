@@ -118,7 +118,6 @@ group :development do
 end
 
 group :test do
-  gem 'turn'
   gem 'minitest'
   # for testing
   gem 'rake'

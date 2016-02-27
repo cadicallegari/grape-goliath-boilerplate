@@ -2,6 +2,7 @@
 # http://www.everburning.com/news/stage-left-enter-goliath/
 # and the params usage can be found at
 # https://github.com/igrigorik/em-http-request/wiki/Issuing-Requests
+require "rubygems"
 
 ENV["RACK_ENV"] ||= 'test'
 require 'simplecov'
@@ -20,10 +21,11 @@ end
 require "rack/test"
 require 'goliath/test_helper'
 require 'em-synchrony/em-http'
+require 'minitest/autorun'
+require 'minitest'
 require './app'
 require 'multi_json'
 require 'oj'
-# require "shoulda/matchers"
 
 require "./config/application.rb"
 

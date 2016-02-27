@@ -40,6 +40,12 @@ After download project
 >> foreman start -f Procfile.dev
 
 
+## Run tests
+
+>>  rake db:test:prepare
+
+>>  rspec
+
 
 ## TODO
 

@@ -65,7 +65,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    ansi (1.5.0)
     arel (6.0.3)
     ast (2.2.0)
     async-rack (0.5.1)
@@ -247,8 +246,6 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.2)
-    turn (0.9.6)
-      ansi
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     unicode-display_width (0.3.1)
@@ -306,7 +303,6 @@ DEPENDENCIES
   simplecov
   standalone_migrations
   thor
-  turn
   uuid
 
 BUNDLED WITH
