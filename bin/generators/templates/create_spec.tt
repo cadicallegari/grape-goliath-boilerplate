@@ -1,0 +1,25 @@
+#!/bin/env ruby
+# encoding: utf-8
+require 'spec_helper'
+
+describe API::<%= @version %>::<%= @name.capitalize %> do
+ include Rack::Test::Methods
+
+  def app
+    API::<%= @version %>::<%= @name.capitalize %>
+  end
+
+  before(:all) do
+    (1..3).to_a.each do |n|
+      FactoryGirl.create :<%= @name.downcase %>, name: "<%= @name.capitalize %> #{n}"
+    end
+    # TODO: Setup your mock data
+  end
+
+  describe "GET /<%= @version.downcase  %>/<%= @name.downcase %>/" do
+    it "returns <%= @name.downcase %>" do
+      get "/<%= @version.downcase  %>/<%= @name.downcase %>.json"
+    end
+  end
+
+end

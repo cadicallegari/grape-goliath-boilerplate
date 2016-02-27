@@ -1,0 +1,8 @@
+FactoryGirl.define do
+
+  factory :<%= @name.downcase %> do
+    # TODO: Setup your mock entities as this example
+    # name        'Magical <%= @name.capitalize %>'
+  end
+
+end

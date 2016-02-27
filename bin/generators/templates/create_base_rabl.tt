@@ -1,0 +1,3 @@
+collection @<%= @name.downcase %>
+
+attributes :id

@@ -1,0 +1,75 @@
+# This is the configuration used to check the rubocop source code.
+
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  RunRailsCops: true
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+
+Documentation:
+   Enabled: false
+
+MultilineOperationIndentation:
+  Enabled: false
+
+Style/SpaceAroundOperators:
+  MultiSpaceAllowedForOperators:
+    - '='
+    - '=>'
+    - '||'
+    - '&&'
+
+SingleSpaceBeforeFirstArg:
+  Enabled: false
+
+# Style/Encoding:
+  # Enabled: true
+
+# Style/AndOr:
+#   # Whether `and` and `or` are banned only in conditionals (conditionals)
+#   # or completely (always).
+#   EnforcedStyle: always
+
+# Style/EmptyLinesAroundBlockBody:
+#   EnforcedStyle: empty_lines
+
+# Style/EmptyLinesAroundClassBody:
+#   EnforcedStyle: empty_lines
+
+# Style/EmptyLinesAroundModuleBody:
+#   EnforcedStyle: empty_lines
+
+# Style/Encoding:
+#   EnforcedStyle: always
+#   SupportedStyles:
+#     - when_needed
+#     - always
+#   AutoCorrectEncodingComment: '# encoding: utf-8'
+
+# Style/ExtraSpacing:
+#   # When true, allows most uses of extra spacing if the intent is to align
+#   # things with the previous or next line, not counting empty lines or comment
+#   # lines.
+#   AllowForAlignment: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  # EnforcedStyle: single_quotes
+#   SupportedStyles:
+#     - single_quotes
+#     - double_quotes
+
+Metrics/LineLength:
+  Max: 150
+
+# # Allow safe assignment in conditions.
+# Lint/AssignmentInCondition:
+#   AllowSafeAssignment: true
+# Use empty lines between defs.
+
+Style/EmptyLineBetweenDefs:
+  # If true, this parameter means that single line method definitions don't
+  # need an empty line between them.
+  AllowAdjacentOneLineDefs: true

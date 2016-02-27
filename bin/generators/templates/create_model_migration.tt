@@ -1,0 +1,17 @@
+# need to require this stuff so we can play with AR models in the migration
+require 'goliath/goliath'
+require 'goliath/runner'
+require 'goliath/rack'
+Dir["./app/models/*.rb"].each { |f| require f }
+
+<%- model_klass = @name.classify %>
+
+class Create<%= @name.camelize   %> < ActiveRecord::Migration
+  def change
+    create_table :<%= @name.downcase %> do |t|
+      # TODO define your columns; remove next line if you don't want timestamps
+      t.timestamps
+    end
+  end
+
+end
